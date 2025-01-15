@@ -1,0 +1,102 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6f61, #ff9e80);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: lighter;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .bucket-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bucket-list li {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .bucket-list li:hover {
+            transform: translateY(-10px);
+            background-color: #ffe5e1;
+        }
+
+        .bucket-list li img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #ff6f61;
+        }
+
+        .bucket-list li h3 {
+            margin: 0;
+            color: #ff6f61;
+            font-size: 1.2em;
+        }
+
+        .bucket-list li.completed::before {
+            content: "\2713"; /* Check mark symbol */
+            color: green;
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #ff6f61, #ff9e80);
+        }
+
+        @media (max-width: 768px) {
+            .bucket-list li {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
